@@ -1,4 +1,5 @@
-fetch('https://raw.githubusercontent.com/dianebk/eindopdracht/main/data/energie.csv?token=GHSAT0AAAAAABUHGU7CP2UP6HX7JD2OHNLSYTS2BJQ')
+fetch('https://raw.githubusercontent.com/dianebk/eindopdracht/main/data/energie.csv?token=GHSAT0AAAAAABUHGU7CSS75ZKKUMAB3FODWYTS2ILQ')
+
     .then(function (response) {
         return response.text();
     })
