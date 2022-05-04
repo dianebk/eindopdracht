@@ -1,5 +1,5 @@
 html {
-    background: url(laminaatbg.jpg) no-repeat center center fixed;
+    background: url(../images/laminaatbg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -31,7 +31,7 @@ ul {
 
 ul li {
     /* background: #456990; */
-    background: url(laminaat-tile.jpg) no-repeat center center fixed;
+    background: url(images/laminaat-tile.jpg) no-repeat center center fixed;
     background-size: cover;
     width: 30%;
     height: 150px;

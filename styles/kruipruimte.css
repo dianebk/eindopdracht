@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url(donker.JPG);
+  background-image: url(../images/donker.JPG);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
