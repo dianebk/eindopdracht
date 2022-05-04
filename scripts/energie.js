@@ -1,4 +1,4 @@
-fetch('../data/energie.csv')
+fetch('https://raw.githubusercontent.com/dianebk/eindopdracht/main/data/energie.csv?token=GHSAT0AAAAAABUHGU7CP2UP6HX7JD2OHNLSYTS2BJQ')
     .then(function (response) {
         return response.text();
     })
@@ -11,5 +11,6 @@ fetch('../data/energie.csv')
     });
 
 function csvToSeries(text) {
-    console.log(text);
+    let dataAsJson = JSC.csv2Json(text);
+    console.log(dataAsJson)
 }
