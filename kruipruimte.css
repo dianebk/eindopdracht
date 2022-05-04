@@ -1,0 +1,48 @@
+html {
+  background: black no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-image: url(donker.JPG);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  justify-content: flex-start;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+#titel {
+  text-align: center;
+}
+
+#instructie {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+/* lamp button */
+#btn {
+  font-size: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#mannetje {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  transform: scaleX(-1);
+}
+
+#mannetje img {
+
+  max-height: 700px;
+}

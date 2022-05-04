@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="budget.css">
+    <script defer src="budget.js"></script>
+    <title>Budget</title>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Budget verdelen</h1>
+        <h3>Hoe zou jij de &euro;10.000 van het verduurzamingsdepot besteden?</h3>
+        <p>De hypotheek is overgesloten met een lagere maandlast als resultaat en daarbij - als een kers op de taart -
+            een
+            verduurzamingsdepot van &euro;10.000. De vraag is nu hoe we dat budget gaan verdelen om het zo efficiënt
+            mogelijk
+            te benutten. <br>
+            <span class="cake">En dat is géén piece of cake!</span>
+        </p>
+    </div>
+
+    <div class="content">
+
+        <div class="formpanel">
+            <form action="" id="budgetform">
+                <fieldset>
+                    <h3>Jouw budgetkeuzes</h3>
+                    <p id="uitleg">Maak je keuzes en bekijk in het zwarte panel het totaalbedrag en de subsidies die je
+                        bij jouw
+                        keuzes
+                        kunt aanvragen</p>
+                    <p>
+                        <label>Vloerisolatie keuze</label><br>
+                        <input type="radio" id="vloerisozelf" name="selectedvloeriso" value="Vloerisolatie zelf doen"
+                            onclick="getTotal();validateVloerisoSubsidie();getSubsidies();" />
+                        Tonzonfolie zelf aanbrengen in de kruipruimte = &euro;663<br>
+                        <input type="radio" id="vloerisouitbesteed" name="selectedvloeriso"
+                            value="Vloerisolatie laten doen"
+                            onclick="getTotal();validateVloerisoSubsidie();getSubsidies();" />
+                        Tonzonfolie laten aanbrengen door klusbedrijf = &euro;2495<br>
+                    </p>
+                    <div id="subsidieVloeriso"></div>
+                    <p>
+                        <label>Glas keuze</label><br>
+                        <input type="radio" id="glaszetter" name="selectedglas" value="HR++ glas door glaszetter"
+                            onclick="getTotal();validateGlasSubsidie();getSubsidies();" />
+                        HR++ glas laten plaatsen door glaszetter = &euro;2000<br>
+                        <input type="radio" id="glaszelf" name="selectedglas" value="HR++ glas zelf plaatsen"
+                            onclick="getTotal();validateGlasSubsidie();getSubsidies();" />
+                        HR++ glas zelf plaatsen = &euro;757<br>
+                        <input type="radio" id="tripleglas" name="selectedglas"
+                            value="Triple glas en kunststof kozijnen"
+                            onclick="getTotal();validateGlasSubsidie();getSubsidies();" />
+                        Triple glas en kunststof kozijnen = &euro;6163<br>
+                    </p>
+                    <div id="subsidieGlas"></div>
+                    <p>
+                        <label>Warmtepompen keuze</label><br>
+                        <input type="radio" id="hybr" name="selectedpomp" value="Hybride met nieuwe CV-ketel"
+                            onclick="getTotal();validateWpSubsidie();getSubsidies();" />
+                        Hybride warmtepomp + nieuwe cv-ketel = &euro;6349<br>
+                        <input type="radio" id="all-e" name="selectedpomp" value="All-electric met boiler"
+                            onclick="getTotal();validateWpSubsidie();;getSubsidies();" />
+                        All-electric warmtepomp incl boiler = &euro;9295<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierbij heb je ook nodig:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Een inductiekookplaat + pannen = &euro;267<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Een
+                        andere groepenkast +
+                        krachtstroom = &euro;1036<br>
+                    </p>
+                    <div id="subsidieWp"></div>
+                    <p>
+                        <input type="checkbox" id="includevloerverwarming" name='includevloervewarming'
+                            onclick="getTotal()" />
+                        <label for='includevloerverwarming' class="inlinelabel">
+                            Vloerverwarming = &euro;1300</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="includezonneboiler" name="includezonneboiler"
+                            onclick="getTotal();getSubsidies();" />
+                        <label for='includezonneboiler' class="inlinelabel">
+                            Zonneboiler = &euro;2040</label>
+                    </p>
+                    <div id="subsidieZonneboiler"></div>
+
+                    <p>
+                        <input type="checkbox" id="includebrievenbus" name="includebrievenbus"
+                            onclick="getTotal();getSubsidies();" />
+                        <label for='includebrievenbus' class="inlinelabel">
+                            Kleine isolatie: Brievenbusgat in deur dicht maken en nieuwe buiten
+                            hangen =
+                            &euro;59</label>
+                    </p>
+                    <div id="subsidieBrievenbus"></div>
+
+                    <p>
+                        <input type="checkbox" id="includeventilatie" name="includeventilatie"
+                            onclick="getTotal();getSubsidies();" />
+                        <label for='includeventilatie' class="inlinelabel">
+                            Ventilatiebox met vochtsensor en CO2 sensor = &euro;335</label>
+                    </p>
+                    <div id="subsidieVentilatie"></div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="resultatenpanel">
+            <h3>Jouw resultaten</h3>
+            <div id="resultaten">
+                <p id="totaalBedrag">Totaalbedrag voor jouw keuzes &euro;0</p>
+                <p id="totaalSubsidies">Totaal subsidiebedrag bij jouw keuzes &euro;0</p>
+            </div>
+            <hr>
+            <div id="toelichting">
+                <h4>Voorwaarden</h4>
+                <p>In de praktijk is het nog lastiger dan dit, want je krijgt niet altijd subsidie voor 1
+                    maatregel.
+                    Voor de vloerisolatiesubsidie bijvoorbeeld is de vereiste dat je nog een andere maatregel hebt
+                    genomen. Er zijn ook regels over het minimum en maximum aantal vierkante meters, en over de
+                    isolatiewaarde van de maatregel.
+                    Meer
+                    info over de beschikbare subsisides en de voorwaarden kun je vinden op de <a
+                        href="https://www.rvo.nl/subsidies-financiering/isde/woningeigenaren/isolatiemaatregelen#maatregelenlijsten"
+                        target="_blank">website van de RVO</a></p>
+
+                <h4>Tijdsdruk</h4>
+                <p>Het verduurzamingsdepot 1 jaar beschikbaar; je kunt het daarna nog met een half jaar
+                    verlengen. Daarna wordt het geld wat dan nog in je depot zit gebruikt als aflossing op je hypotheek.
+                    Ook moet je de subsidies aanvragen binnen 1 jaar na het nemen van de maatregel. Dus als je bv in de
+                    zomer al vloerisolatie aanbrengt, en pas de lente erop de warmtepomp hebt, dan heb je nog een paar
+                    maanden over om voor deze 2 maatregelen je subsidieaanvraag te doen.</p>
+
+                <h4>Terugverdientijd</h4>
+                <p>Als je de terugverdientijd van je verduurzaming belangrijk vindt moet je ook nog schattingen en
+                    berekeningen maken om te weten hoeveel energie - en dus geld - je met jouw maatregelen zal besparen.
+                    Ga je voor een
+                    all-electric warmtepomp, dan kun je van het gas af, wat met zich meebrengt dat dan ook de vaste
+                    kosten voor gas van je energiefaktuur verdwijnen. Daarentegen zal je stroomverbruik omhoog
+                    aan. Als je al zonnepanelen hebt, zoals ik, kun je (een deel daarvan) opvangen met wat je zelf
+                    opwekt. En hoe beter je isoleert, hoe minder je hoeft te stoken, uiteraard.</p>
+            </div>
+        </div>
+    </div>
+    <div id="terug">
+        <a class="terug-btn" href="timeline.html#anchor-budget">Terug naar de tijdlijn</a>
+    </div>
+</body>
+
+</html>

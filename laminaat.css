@@ -1,0 +1,88 @@
+html {
+    background: url(laminaatbg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+
+#container {
+    width: 500px;
+    /* height: 500px; */
+    background: transparent;
+    margin: 10px auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+ul li {
+    /* background: #456990; */
+    background: url(laminaat-tile.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 30%;
+    height: 150px;
+    border: 1px solid #028090;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+/* .empty {
+    background: transparent;
+    border: 2px solid #114B5F;
+} */
+
+/* Modal styles */
+#modal {
+    width: 40%;
+    height: 300px;
+    background: orange;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Square Peg';
+}
+
+#modal #message {
+    color: white;
+    margin: 0;
+    font-size: 4rem;
+}
+
+.hide {
+    display: none;
+}
+
+#modal #modalheader {
+    text-align: right;
+    padding: 5px 10px;
+}
+
+#modal #modalheader button {
+    padding: 10px;
+    border: 0px;
+    background: grey;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#closeBtn {
+    font-size: 1.5rem;
+}

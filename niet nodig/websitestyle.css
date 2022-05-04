@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,400&family=Roboto:wght@300&family=Square+Peg&display=swap');
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+
+header, section, footer, parent {
+    margin: 0;
+    padding: 20px;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(57, 118, 230);
+    font-size: 20px;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+.intro {
+    font-size: 1.5rem;
+}
+h3 {
+    font-family: 'Square Peg';
+    font-size: 2.5rem;
+    color: rgb(57, 118, 230);
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item-left {
+    flex: 50%;
+    padding: 10px;
+    background-image: linear-gradient(rgb(211, 244, 248), #d3f4f8e3);
+}
+
+.flex-item-right {
+    width: 300px;
+    padding: 20px;
+}
+
+.opmerking {
+    padding: 30px;
+    justify-content: center;
+    background-color: orange;
+}
+
+#verduurzamingsopties {
+        width: 100%;
+        margin-top: 10px;
+        font-family: 'IBM Plex Mono', monospace;
+      }
+#verduurzamingsopties option {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.kies {
+    width: 100%;
+    margin: 10px 0 5px 0;
+    padding: 10px;
+    background-color: orange;
+    font-family: 'IBM Plex Mono', monospace;
+    border-style: solid 1px;
+    border-radius: 5px;
+    border-color: orange;
+}
+
+#raam {
+    position: absolute;
+    z-index: 9;
+    background-color: transparent;
+    border: 2px solid #202020;
+    text-align: center;
+  }
+  
+  #raamheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+  }

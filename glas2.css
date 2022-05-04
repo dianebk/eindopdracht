@@ -1,0 +1,109 @@
+html {
+    background: url(raamkozijn.jpg) no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 540px;
+    overflow: hidden;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.kozijnbuiten {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 460px;
+}
+
+#kozijn1links {
+    background-color: rgba(105, 67, 5, 0.907);
+    width: 90px;
+    height: 40px;
+}
+
+#dagmaat {
+    background-color: transparent;
+    width: 320px;
+    height: 40px;
+    text-align: center;
+}
+
+#kozijn2rechts {
+    background-color: rgba(105, 67, 5, 0.907);
+    width: 90px;
+    height: 40px;
+}
+
+.kozijnbinnen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 500px;
+}
+
+#kozijn3links {
+    background-color: rgba(105, 67, 5, 0.907);
+    width: 45px;
+    height: 40px;
+    margin-right: 7px;
+}
+
+#raam {
+    /* position: absolute; */
+    background: inherit;
+    overflow: hidden;
+    width: 350px;
+    height: 20px;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(172, 235, 241, 0.3) inset,
+        0 6px 20px rgba(0, 0, 0, 0.15) inset;
+    z-index: 1;
+    border: 3px solid #6fd1ee;
+    text-align: center;
+}
+
+#raam:before {
+    content: '';
+    box-shadow: inset 0 0 500px rgba(172, 235, 241, 0.649);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+#sponningmaat {
+    text-align: center;
+}
+
+#kozijn4rechts {
+    background-color: rgba(105, 67, 5, 0.907);
+    width: 45px;
+    height: 40px;
+    margin-left: 7px;
+}
+
+#closeBtn {
+    font-size: 1.5rem;
+}
+
+.outro {
+    display: flex;
+    margin: 30px 0 100px 0;
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 6px;
+}

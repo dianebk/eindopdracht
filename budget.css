@@ -1,0 +1,85 @@
+html {
+    background: url(taartcreamcheese.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.cake {
+    color: rgb(203, 174, 137);
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: transparent;
+    margin-bottom: 70px;
+}
+
+.formpanel {
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px;
+    min-width: 30vw;
+    max-width: 40vw;
+}
+
+#uitleg {
+    font-weight: bolder;
+}
+
+fieldset {
+    border: none;
+}
+
+.resultatenpanel {
+    background-color: rgba(6, 6, 6, 0.751);
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px rgba(6, 6, 6, 0.751);
+    border-radius: 6px;
+    min-width: 35vw;
+    color: rgb(203, 174, 137);
+    font-size: 0.9rem;
+    min-width: 30vw;
+    max-width: 40vw;
+}
+
+a {
+    text-decoration-color: white;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .intro {
+        min-width: 80vw;
+        max-width: 87vw;
+        margin: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .formpanel {
+        min-width: 80vw;
+        max-width: 87vw;
+    }
+
+    .resultatenpanel {
+        min-width: 80vw;
+        max-width: 87vw;
+    }
+}
+
+#resultaten {
+    color: white;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="glas.css">
+    <title>Draag het glas de trap op</title>
+</head>
+
+<body>
+    <h2>The Sound of Breaking Glass</h2>
+    <div>
+        <a class="terug-btn" href="timeline.html">Terug naar de tijdlijn</a>
+    </div>
+    <div id="raaminstructie">
+        <p>Draag het glas de trap op door de bovenste rand vast te pakken met je muis en de trap op te slepen</p>
+    </div>
+    <!-- The Modal -->
+
+    <div class="container">
+        <div id="modal" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <!-- <span onclick="document.getElementById('modal').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span> -->
+                    <p>Oh nee!</p>
+                    <p>Tegen de muur gestoten...</p>
+                    <p>Nu is het glas kapot...</p>
+                </div>
+            </div>
+        </div>
+        <div class="stairs">
+            <div class="base"></div>
+            <div class="step" style="--j:1" ;>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="step" style="--j:2" ;>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="step" style="--j:3" ;>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="step" style="--j:4" ;>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="step" style="--j:5" ;>
+                <i></i>
+                <i></i>
+            </div>
+            <div class="step" style="--j:6" ;>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+
+        <!-- Draggable DIV -->
+        <div id="raam">
+            <p class="glas">Draag het glas de trap op</p>
+            <p class="glas">Pas op!</p>
+            <p class="glas">Niet stoten!</p>
+        </div>
+        <script>// Maak het glas versleepbaar:
+            dragElement(document.getElementById("raam"));
+
+            function dragElement(elmnt) {
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                // if (document.getElementById(elmnt.id)) {
+                //     // if present, the header is where you move the DIV from:
+                //     document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+                // } else {
+                //     // otherwise, move the DIV from anywhere inside the DIV:
+                elmnt.onmousedown = dragMouseDown;
+
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                }
+
+                function closeDragElement() {
+                    // stop moving when mouse button is released:
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                    elmnt.onmouseup = popUp;
+                }
+
+                function popUp() {
+                    document.getElementById('modal').style.display = 'block';
+                }
+            }
+        </script>
+
+
+
+    </div>
+
+</body>
+
+</html>
