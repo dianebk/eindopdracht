@@ -1,4 +1,4 @@
-Week,Opgewekt kWh,Afgenomen,Verbruikt,Teruggeleverd,Betalen kWh,Gas m3,"Stroom Euro a 0,42","Gas Euro a 1,34",Totaal
+Week,Opgewekt_kWh,Afgenomen,Verbruikt,Teruggeleverd,Betalen_kWh,Gas_m3,Stroom_Euro,Gas_Euro,Totaal
 week 2022-17,"86,2","66,2","89,6","62,8","3,4",0,"€ 1,43","€ 0,00","€ 1,43"
 week 2022-16,"95,6","33,5",51,"78,1","-44,6",0,"-€ 18,73","€ 0,00","-€ 18,73"
 week 2022-15,"91,1",57,"76,2","71,9","-14,9",0,"-€ 6,26","€ 0,00","-€ 6,26"
