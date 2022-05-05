@@ -1,4 +1,3 @@
-
 function makeChart() {
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
@@ -91,26 +90,26 @@ function makeChart() {
             {
                 type: "line",
                 showInLegend: true,
-                name: "totaalbedrag 2021 (tarief '22)",
-                color: "#FF0000",
+                name: "totaalbedrag 2021 (tarieven '21)",
+                color: "#9933FF",
                 dataPoints: [
-                    { y: 4.70, x: 17 },
-                    { y: 44.07, x: 16 },
-                    { y: 8.26, x: 15 },
-                    { y: 35.52, x: 14 },
-                    { y: 12.47, x: 13 },
-                    { y: 21.35, x: 12 },
-                    { y: 43.37, x: 11 },
-                    { y: 40.42, x: 10 },
-                    { y: 21.12, x: 9 },
-                    { y: 35.71, x: 8 }
+                    { y: 2.86, x: 17 },
+                    { y: 24.32, x: 16 },
+                    { y: 4.85, x: 15 },
+                    { y: 19.82, x: 14 },
+                    { y: 7.04, x: 13 },
+                    { y: 12.05, x: 12 },
+                    { y: 24.23, x: 11 },
+                    { y: 22.54, x: 10 },
+                    { y: 11.93, x: 9 },
+                    { y: 20.03, x: 8 }
                 ]
             },
             {
                 type: "line",
                 showInLegend: true,
-                name: "totaalbedrag 2021 (tarief '21)",
-                color: "#9933FF",
+                name: "totaalbedrag 2021 (tarieven '22)",
+                color: "#FF0000",
                 dataPoints: [
                     { y: 4.70, x: 17 },
                     { y: 44.07, x: 16 },
