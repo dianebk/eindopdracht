@@ -266,9 +266,8 @@ h1 {
 
 /* redenen met bol */
 a {
-  text-decoration: white;
+  text-decoration: white underline;
   color: white;
-  font-weight: bold;
 }
 
 .redenen-wrapper {
