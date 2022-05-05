@@ -3,7 +3,9 @@ function makeChart() {
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         title: {
-            text: "Energie kosten Euro",
+            fontFamily: "'Roboto', Arial, Helvetica', sans-serif",
+            fontWeight: "bold",
+            text: "Energiekosten per week",
         },
         axisX: {
             title: "Week nummer",
@@ -13,19 +15,21 @@ function makeChart() {
             title: "Euro",
             valueFormatString: "€#0",
             gridColor: "#B6B1A8",
-            tickColor: "#B6B1A8"
+            tickColor: "#B6B1A8",
+            interval: 5,
         },
         toolTip: {
             shared: true
         },
         legend: {
             cursor: "pointer",
+            fontWeight: "200",
             itemclick: toggleDataSeries
         },
         data: [{
             type: "stackedColumn",
             showInLegend: true,
-            name: "gas",
+            name: "gas 2022",
             color: "#99CCFF",
             dataPoints: [
                 { y: 0, x: 17 },
@@ -43,7 +47,7 @@ function makeChart() {
         {
             type: "stackedColumn",
             showInLegend: true,
-            name: "stroom afgenomen",
+            name: "stroom afgenomen 2022",
             color: "#FFCC99",
             dataPoints: [
                 { y: 1.43, x: 17 },
@@ -55,9 +59,9 @@ function makeChart() {
         },
         {
             type: "stackedColumn",
+            name: "stroom teruggeleverd 2022",
+            color: "#99FF99",
             showInLegend: true,
-            name: "stroom teruggeleverd",
-            color: "#99CCFF",
             dataPoints: [
                 { y: -18.73, x: 16 },
                 { y: -6.26, x: 15 },
@@ -69,7 +73,7 @@ function makeChart() {
         {
             type: "line",
             showInLegend: true,
-            name: "totaalbedrag",
+            name: "totaalbedrag 2022",
             color: "#000000",
             dataPoints: [
                 { y: 1.43, x: 17 },
@@ -84,6 +88,42 @@ function makeChart() {
                 { y: 35.29, x: 8 }
             ]
         },
+            {
+                type: "line",
+                showInLegend: true,
+                name: "totaalbedrag 2021 (tarief '22)",
+                color: "#FF0000",
+                dataPoints: [
+                    { y: 4.70, x: 17 },
+                    { y: 44.07, x: 16 },
+                    { y: 8.26, x: 15 },
+                    { y: 35.52, x: 14 },
+                    { y: 12.47, x: 13 },
+                    { y: 21.35, x: 12 },
+                    { y: 43.37, x: 11 },
+                    { y: 40.42, x: 10 },
+                    { y: 21.12, x: 9 },
+                    { y: 35.71, x: 8 }
+                ]
+            },
+            {
+                type: "line",
+                showInLegend: true,
+                name: "totaalbedrag 2021 (tarief '21)",
+                color: "#9933FF",
+                dataPoints: [
+                    { y: 4.70, x: 17 },
+                    { y: 44.07, x: 16 },
+                    { y: 8.26, x: 15 },
+                    { y: 35.52, x: 14 },
+                    { y: 12.47, x: 13 },
+                    { y: 21.35, x: 12 },
+                    { y: 43.37, x: 11 },
+                    { y: 40.42, x: 10 },
+                    { y: 21.12, x: 9 },
+                    { y: 35.71, x: 8 }
+                ]
+            },
         ]
     });
 
@@ -95,7 +135,7 @@ function makeChart() {
             dataSeries = chart.options.data[i];
             for (var j = 0; j < dataSeries.dataPoints.length; j++) {
                 if (dataSeries.dataPoints[j].y <= 0)
-                    dataSeries.dataPoints[j].color = 'rgb(75, 205, 10)';
+                    dataSeries.dataPoints[j].color = '#99FF99';
             }
         }
     }
