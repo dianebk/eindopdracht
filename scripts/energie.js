@@ -1,5 +1,4 @@
-fetch('https://raw.githubusercontent.com/dianebk/eindopdracht/cc887d5ca4d25208811c954abf0e6c1bb0011256/data/energie.csv?token=GHSAT0AAAAAABUHGU7DRDYK3U4YVSYKWJSWYTS23KQ')
-
+fetch('https://raw.githubusercontent.com/dianebk/studie/main/energie.csv')
     .then(function (response) {
         return response.text();
     })
@@ -11,7 +10,29 @@ fetch('https://raw.githubusercontent.com/dianebk/eindopdracht/cc887d5ca4d2520881
         console.log(error);
     });
 
+
+
 function csvToSeries(text) {
+    const stroombedrag = 'Stroom_Euro';
     let dataAsJson = JSC.csv2Json(text);
-    console.log(dataAsJson)
+    let jaar22 = [], jaar21 = [];
+    dataAsJson.forEach(function (row) {
+        if (row.Jaar === '2022') {
+            jaar22.push({ x: row.Jaar, y: row[stroombedrag] })
+        } else if (row.Jaar === '2021') {
+            jaar21.push({ x: row.Week, y: row[stroombedrag] });
+        }
+    });
+    console.log([jaar22, jaar21]);
+    return [
+        { name: '2022', points: jaar22 },
+        { name: '2021', points: jaar21 }
+    ];
+
+
+    function renderChart(series) {
+        JSC.Chart('chartDiv', {
+            series: series
+        });
+    }
 }
