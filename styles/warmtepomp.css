@@ -1,0 +1,51 @@
+html {
+    background: url(../images/blue-sky.jpg) no-repeat top right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+body h1 {
+    color: white;
+    font-size: 3.2rem;
+    margin: 70px 0 20px 0;
+}
+
+.intro {
+    background-color: white;
+    max-width: 70%;
+    text-align: left;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 10px 10px;
+    margin: 40px;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.intro a:link {
+    color: black;
+    text-decoration: underline;
+}
+
+.intro a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+.intro a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* .uitlegvideo {
+    height: 100%;
+    margin-bottom: 300px;
+} */
