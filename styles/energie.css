@@ -1,5 +1,5 @@
 html {
-    background: url(../images/blue-sky.jpg) no-repeat top right fixed;
+    background: url(../images/zonnepanelen.jpg) no-repeat center right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,17 +9,19 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 body h1 {
-    color: white;
+    color: rgb(233, 19, 42);
     font-size: 3.2rem;
     margin: 70px 0 20px 0;
 }
 
 .intro,
-.toelichtingchart {
+.toelichtingchart,
+.solar {
     background-color: white;
     max-width: 70%;
     text-align: left;
@@ -28,7 +30,6 @@ body h1 {
     padding: 10px 10px;
     margin: 40px;
     line-height: 1.5rem;
-    font-weight: 500;
 }
 
 .intro a:link {
@@ -46,14 +47,14 @@ body h1 {
     text-decoration: underline;
 }
 
-.toelichtingchart {
-    margin-bottom: 100px;
+.solar {
+    margin-bottom: 800px;
 }
 
 #chartContainer {
     width: 95%;
     height: 450px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .canvasjs-chart-container {

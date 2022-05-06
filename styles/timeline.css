@@ -1,23 +1,7 @@
 html {
-  /* background: linear-gradient(45deg, #053e64, #02c83d, rgb(78, 167, 202), rgb(32, 99, 50)); */
-  background: linear-gradient(rgb(78, 162, 202), rgb(32, 99, 50));
-  /* background-size: 500% 400%; */
-  /* animation: gradient 15s ease infinite; */
+  /* background: linear-gradient(rgb(78, 162, 202), rgb(32, 99, 50)); */
+  background: #20202c;
 }
-
-/* @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-} */
 
 * {
   box-sizing: border-box;
@@ -25,10 +9,12 @@ html {
 
 body {
   color: white;
+  background-color: rgb(78, 162, 202);
 }
 
 .climateclockcontainer {
   width: 100%;
+  background-color: #20202c;
 }
 
 h1 {
@@ -40,19 +26,17 @@ h1 {
 .intro {
   color: white;
   background-color: transparent;
-  max-width: 70%;
+  max-width: 50vw;
   border-color: transparent;
 }
 
 .intro p {
   line-height: 1.5rem;
-  font-weight: 500;
 }
 
 .subintro {
   display: flex;
   width: 100vw;
-  /* background-color: orange; */
   background-color: rgb(233, 19, 42);
   justify-content: center;
   margin-top: 20px;
@@ -70,7 +54,6 @@ h1 {
 
 /* Responsive layout */
 @media (max-width: 800px) {
-
   .flex-item-right,
   .flex-item-left {
     flex: 100%;
@@ -80,7 +63,7 @@ h1 {
 /* Timeline verticaal */
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 70vw;
   margin: 0 auto;
 }
 
@@ -238,24 +221,105 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: 50px;
-  border-top: 56px solid rgb(233, 19, 42);
-}
-
-.redenheader {
-  display: flex;
   width: 100vw;
   justify-content: center;
-  margin: 70px 0 0 0;
+  background-color: #20202c;
+  border-top: 56px solid rgb(233, 19, 42);
   padding: 10px 0 10px 0;
   color: white;
+  }
+
+    #ruimte {
+      display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-bottom: 50px;
+    background-color: #20202c;
+    height: 50vh;
+    z-index: 1;
+    }
+    
+    #container {
+      height: 400px;
+      position: relative;
+      left: calc(50% - 200px);
+      /* position: absolute; */
+      top: calc(50% - 200px);
+      width: 400px;
+    }
+    
+    #container #sun {
+      background-color: yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 30px white;
+      height: 100px;
+      left: 150px;
+      position: absolute;
+      top: 150px;
+      width: 100px;
+    }
+    
+    #container .orbit {
+      border: solid;
+      border-color: white transparent transparent transparent;
+      border-radius: 50%;
+      border-width: 1px 1px 0 0;
+      box-sizing: border-box;
+      position: absolute;
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+    
+    #container .orbit#earth-orbit {
+      animation: orbit 36.5s linear infinite;
+      height: 300px;
+      left: 50px;
+      top: 50px;
+      width: 300px;
+    }
+    
+    #container .orbit#moon-orbit {
+      animation: orbit 2.7s linear infinite;
+      height: 80px;
+      left: -25px;
+      top: -25px;
+      width: 80px;
+    }
+    
+    #container .orbit .globe {
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    #container .orbit .globe#earth {
+      background: linear-gradient(45deg, white, rgb(78, 162, 202), rgb(78, 162, 202));
+      ;
+      height: 30px;
+      right: 28px;
+      top: 28px;
+      width: 30px;
+    }
+    
+    #container .orbit .globe#moon {
+      background: #d6d6d6;
+      height: 12px;
+      right: 2px;
+      top: 8px;
+      width: 12px;
+    }
+    
+    @-webkit-keyframes orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes orbit {
+      to {
+        transform: rotate(360deg);
+      }
 }
 
-/* h2 {
-  font-size: 1.8rem;
-  line-height: 2rem;
-}
 
 @media screen and (max-width: 600px) {
   h2 {
@@ -269,15 +333,17 @@ a {
   text-decoration: white underline;
   color: white;
 }
+}
 
-.redenen-wrapper {
+.redenwrapper {
   display: flex;
-  max-width: 50vw;
+  max-width: 70vw;
   margin: 30px;
 }
 
-.redenen-main {
-  flex: 3;
+.redenwrapper a {
+  text-decoration-color: white;
+  color: white;
 }
 
 .circle-left {
@@ -309,11 +375,11 @@ a {
 }
 
 @media (max-width: 600px) {
-  .redenen-wrapper {
+  .redenwrapper {
     flex-direction: column;
   }
 
-  .redenen-main {
+  .reden-main {
     margin-right: 0;
     margin-bottom: 60px;
   }
