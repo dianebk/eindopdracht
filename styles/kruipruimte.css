@@ -36,9 +36,12 @@ body {
 }
 
 #mannetje {
-  display: flex;
+  /* display: flex;
   align-self: flex-start;
-  justify-content: flex-start;
+  align-items: flex-end;
+  */ position: absolute;
+  bottom: 0;
+  left: 0;
   transform: scaleX(-1);
 }
 
