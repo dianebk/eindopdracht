@@ -6,8 +6,6 @@ html {
     background-size: cover;
 }
 
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -23,6 +21,13 @@ html {
     background-color: white;
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+        width: 380px;
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+}
 .kozijnbuiten {
     display: flex;
     flex-direction: row;
@@ -31,10 +36,20 @@ html {
     max-width: 460px;
 }
 
+@media screen and (max-width: 600px) {
+    #kozijnbuiten {
+        max-width: 290px;
+    }
+}
 #kozijn1links {
     background-color: rgba(105, 67, 5, 0.907);
     width: 90px;
     height: 40px;
+}
+@media screen and (max-width: 600px) {
+    #kozijn1links {
+        max-width: 60px;
+    }
 }
 
 #dagmaat {
@@ -44,17 +59,31 @@ html {
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    #dagmaat {
+        width: 190px;
+    }
+}
 #kozijn2rechts {
     background-color: rgba(105, 67, 5, 0.907);
     width: 90px;
     height: 40px;
 }
-
+@media screen and (max-width: 600px) {
+    #kozijn2rechts {
+        max-width: 60px;
+    }
+}
 .kozijnbinnen {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 500px;
+}
+@media screen and (max-width: 600px) {
+    #kozijnbinnen {
+        max-width: 290px;
+    }
 }
 
 #kozijn3links {
@@ -76,6 +105,11 @@ html {
     z-index: 1;
     border: 3px solid #6fd1ee;
     text-align: center;
+}
+@media screen and (max-width: 600px) {
+    #raam {
+        width: 200px;
+    }
 }
 
 #raam:before {
@@ -102,8 +136,10 @@ html {
 
 .outro {
     display: flex;
-    margin: 30px 0 100px 0;
+    max-width: 70vw;
+    margin: 0 0 100px 0;
     padding: 20px 20px;
     background-color: white;
     border-radius: 6px;
+    
 }
