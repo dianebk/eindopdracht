@@ -13,15 +13,14 @@ html {
     justify-content: center;
     align-items: center;
     min-height: 700px;
-    min-width: 1200px;
-    overflow: hidden;
+    min-width: 360px;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 .stairs {
     position: relative;
-    width: 500px;
+    width: 360px;
     height: 300px;
     transform-style: preserve-3d;
     transform: rotateX(-30deg) rotateY(160deg);
@@ -35,7 +34,6 @@ html {
     height: 300px;
     background: rgb(247, 223, 180);
     transform: rotateX(90deg) translateZ(-150px) scale(1.25);
-    /* filter: blur(20px); */
 }
 
 .stairs .step {
