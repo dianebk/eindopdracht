@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
     <div id="terug">
-        <a class="terug-btn" href="timeline.html#anchor-brievenbus">Terug naar de tijdlijn</a>
+        <a class="terug-btn" href="index.html#anchor-brievenbus">Terug naar de tijdlijn</a>
     </div>
 </body>
 
