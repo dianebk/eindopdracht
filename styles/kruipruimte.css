@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url(../images/donker.JPG);
+  background-image: url(../images/donker.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -46,6 +46,5 @@ body {
 }
 
 #mannetje img {
-
   max-height: 700px;
 }

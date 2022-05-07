@@ -52,19 +52,29 @@ h1 {
 
 /* TIMELINE */
 
+/* Timeline verticaal */
+.timeline {
+  position: relative;
+  max-width: 70vw;
+  margin: 0 auto;
+}
 /* Responsive layout */
 @media (max-width: 800px) {
   .flex-item-right,
   .flex-item-left {
     flex: 100%;
   }
+  
 }
 
-/* Timeline verticaal */
-.timeline {
-  position: relative;
-  max-width: 70vw;
-  margin: 0 auto;
+@media (max-width: 900px) {
+  .timeline {
+    max-width: 100vw;
+    }
+    
+    .content h2 {
+      line-height: 1.5rem;
+    }
 }
 
 /* Timeline bolletjes */
